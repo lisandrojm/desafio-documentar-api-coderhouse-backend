@@ -2,9 +2,9 @@
 /* /src/utils/swagger/swagger.js */
 /* ************************************************************************** */
 
-/* const path = require('path'); */
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+const path = require('path');
 
 const options = {
   swaggerDefinition: {
@@ -15,9 +15,7 @@ const options = {
       description: 'API para administrar un ecommerce',
     },
   },
-  // Utilizando path.join para construir la ruta de la carpeta "docs"
-  /*   apis: [path.join(__dirname, 'src', 'docs', '**', '*.yaml')], */
-  apis: ['index.js'],
+  apis: [path.join(__dirname, '..', '..', 'docs', '**', '**.yaml')],
 };
 
 const specs = swaggerJsdoc(options);
