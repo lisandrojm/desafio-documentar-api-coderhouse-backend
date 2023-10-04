@@ -1,5 +1,5 @@
 /* ************************************************************************** */
-/* /src/utils/mailManager/index.js 
+/* /src/utils/mailManager/mailManager.js 
 /* ************************************************************************** */
 
 const { createTransport } = require('nodemailer');

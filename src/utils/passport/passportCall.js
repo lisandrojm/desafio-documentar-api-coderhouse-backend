@@ -1,6 +1,5 @@
 /* ************************************************************************** */
-/* /src/utils/passport/passport.js - Configuración de Multer  (middleware de manejo de
- archivos para aplicaciones web basadas en Node.js)
+/* /src/utils/passport/passport.js 
 /* ************************************************************************** */
 const passport = require('passport');
 

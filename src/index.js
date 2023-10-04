@@ -22,6 +22,9 @@ const Dao = require('./dao/factory');
 const { generateFakeProducts } = require('./scripts/generateFakerProducts');
 const ErrorHandler = require('./utils/errors/index');
 /* Importar loggerMiddleware porque /src/index.js no se ejecutó aún */
+
+const { swaggerUi, specs } = require('./utils/swagger/swagger');
+
 const loggerMiddleware = require('./utils/logger/loggerMiddleware');
 /* Aplicamos el middleware para configurar req.logger */
 const req = {};
@@ -83,6 +86,10 @@ class Server {
       })
     );
     initializePassport();
+
+    // Middleware de Swagger
+    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+
     this.app.use(passport.initialize());
     this.app.use(passport.session());
     this.app.use(ErrorHandler);
