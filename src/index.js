@@ -17,7 +17,7 @@ const PORT = `${config.port}` || 3001;
 const passport = require('passport');
 const initializePassport = require('./config/passport');
 /* Inicializar factory */
-const Dao = require('./dao/factory');
+/* const Dao = require('./dao/factory'); */
 /* faker products */
 const { generateFakeProducts } = require('./scripts/generateFakerProducts');
 const ErrorHandler = require('./utils/errors/index');
