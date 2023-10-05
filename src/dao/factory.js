@@ -54,3 +54,15 @@ switch ((req, persistence)) {
 }
 
 module.exports = Dao;
+
+/////////////////////////////////////////////////////////////////////////////////
+/* Formato de comandos */
+/////////////////////////////////////////////////////////////////////////////////
+/* node indexedDB.js -m <nombre_de_la_variable_de_entorno> -p <nombre_de_la_variable_de_persistencia> */
+
+/////////////////////////////////////////////////////////////////////////////////
+/* Ejemplos de comandos para para inicializar el proyecto con diferentes variables de entorno y capas de persistencia */
+/////////////////////////////////////////////////////////////////////////////////
+/* node index.js -m development -p MONGO */
+/* node index.js -m production -p MEMORY */
+/* node index.js -m staging -p FILESYSTEM */
