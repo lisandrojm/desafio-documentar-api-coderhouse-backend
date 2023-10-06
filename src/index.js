@@ -16,15 +16,12 @@ const MongoStore = require('connect-mongo');
 const PORT = `${config.port}` || 3001;
 const passport = require('passport');
 const initializePassport = require('./config/passport');
-/* Inicializar factory */
-/* const Dao = require('./dao/factory'); */
 /* faker products */
 const { generateFakeProducts } = require('./scripts/generateFakerProducts');
 const ErrorHandler = require('./utils/errors/index');
-/* Importar loggerMiddleware porque /src/index.js no se ejecutó aún */
-
+/* swagger */
 const { swaggerUi, specs } = require('./utils/swagger/swagger');
-
+/* Importar loggerMiddleware porque /src/index.js no se ejecutó aún */
 const loggerMiddleware = require('./utils/logger/loggerMiddleware');
 /* Aplicamos el middleware para configurar req.logger */
 const req = {};

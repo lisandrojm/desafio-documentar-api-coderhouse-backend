@@ -10,7 +10,7 @@ const options = {
   swaggerDefinition: {
     openapi: '3.0.1',
     info: {
-      title: 'Ecommerce API',
+      title: 'Freelo ECOM API',
       version: '1.0.0',
       description: 'API para administrar un ecommerce',
     },
