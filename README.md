@@ -8,10 +8,6 @@ Este repositorio contiene el desafío "Documentar Api" con las siguientes caract
 
 Configuración necesaria para tener documentado tu proyecto final a partir de Swagger.
 
-- El link del correo expira después de 1 hora de enviado.
-- Se impide reestablecer la contraseña con la misma contraseña del usuario y se le indica que no se puede colocar la misma contraseña.
-- Cuando el link expira se redirige al usuario a una vista que le permite generar nuevamente el correo de restablecimiento, el cual cuenta con una nueva duración de 1 hora.
-
 <small>Directorio/s de referencia</small>
 
 - `/src/index.js`: Configuración de Swagger en el inicion de la app
