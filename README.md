@@ -26,7 +26,6 @@ Configuración necesaria para tener documentado tu proyecto final a partir de Sw
 
 https://github.com/lisandrojm/desafio_documentar_api/assets/35199683/00182217-650c-481f-a0bc-23a1d444347d
 
-
 ---
 
 ## Requisitos
@@ -158,9 +157,6 @@ El proyecto utiliza las siguientes dependencias:
 - **winston (v3.10.0):** Biblioteca para el registro de registros (logs) en Node.js.
 - **Swagger-jsdoc (v6.2.8):** Biblioteca para generar documentación de API utilizando comentarios en el código fuente.
 - **Swagger-ui-express (v5.0.0):** Biblioteca para renderizar la documentación de Swagger de forma interactiva en una aplicación Express..
-
-  "swagger-jsdoc": "^6.2.8",
-  "swagger-ui-express": "^5.0.0",
 
 ## DevDependencies
 
