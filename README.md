@@ -28,6 +28,9 @@ Configuración necesaria para tener documentado tu proyecto final a partir de Sw
 
 ### Video "Documentación de Api"
 
+https://github.com/lisandrojm/desafio_documentar_api/assets/35199683/00182217-650c-481f-a0bc-23a1d444347d
+
+
 ---
 
 ## Requisitos
