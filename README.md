@@ -83,6 +83,50 @@ Sigue estos pasos para instalar y configurar el proyecto:
 
    Asegúrate de reemplazar `<PUERTO_DE_LA_APP>` con el número de puerto especificado en el archivo `.env`.
 
+7. Ahora podrás utilizar la vista de Login en la aplicación.
+
+## Credenciales de Admin:
+
+### Email:
+
+```
+adminCoder@coder.com
+```
+
+### Password:
+
+```
+adminCod3r123
+```
+
+## Estructura general del proyecto
+
+Aquí tienes la estructura del proyecto con descripciones para cada directorio:
+
+El proyecto sigue la siguiente estructura de directorios:
+
+- `/.env`: Variables de entorno.
+
+- `/.env.example`: Archivo de ejemplo que muestra la estructura y variables de entorno requeridas para la configuración de la aplicación.
+
+- `/src/components`: Carpeta contenedora de todos los componentes. Cada componente contiene un archivo index.js con sus rutas, una carpeta de controlador y una de servicios.
+
+- `/src/config`: Archivos de configuración de la aplicación.
+
+  - `/src/config/index.js`: Exporta variables de entorno y configuraciones generales.
+  - `/src/config/mongo.js`: Configuración de Mongoose para establecer la conexión a la base de datos MongoDB.
+  - `/src/config/passport.js`: Configuración de Passport para generar las estrategias de autenticación y autorización.
+
+- `/src/models`: Modelos de datos de la aplicación.
+
+- `/src/public`: Archivos públicos de la aplicación, como estilos CSS, imágenes y scripts JavaScript.
+
+- `/src/routes`: Archivos de definición de rutas de la aplicación.
+
+- `/src/utils`: Archivos relacionados con la configuración de las utilidades reutilizables.
+
+- `/src/views`: Todas las vistas del proyecto.
+
 ## Dependencias
 
 El proyecto utiliza las siguientes dependencias:
@@ -126,3 +170,27 @@ El proyecto utiliza las siguientes devDependencies:
 - Nodemon (v2.0.22): Utilidad que monitoriza cambios en los archivos y reinicia automáticamente la aplicación.
 
 Estas dependencias pueden ser instaladas ejecutando el comando `npm install` en el directorio del proyecto.
+
+## Postman Collections
+
+- En la carpeta `postman_collections`, encontrarás los archivos necesarios para importar las colecciones en Postman y realizar pruebas en el proyecto. Las colecciones proporcionan ejemplos de solicitudes HTTP para interactuar con la API y probar su funcionalidad.
+
+- Importante: Como el proyecto cuenta con un Middleware de autorización hay que realizar los siguientes pasos en Postman:
+
+  1.0 - Ir a Postman/Headers/Cookies/Manage Cookies.
+
+  2.0 - Type a domain name:localhost.
+
+  3.0 - Template: Cookie_5=value; Path=/; Expires=Sun, 01 Sep 2024 22:47:37 GMT;
+
+  3.1 - Loguearse como Admin o como User según corresponda para testear la ruta.
+
+  3.2 - Una vez logueado ingresar a Application/Cookies/http://localhost:8080 y copiar el value del token jwt.
+
+  3.3 - En el Template de la cookie de Postman reemplazar Cookie_5 por jwt y value por el value del token copiado.
+
+  3.4 - Debe quedar un código como el siguiente (el token a continuación es un ejemplo):
+
+  jwt=ey123456789wolrtjlwkjt.eyJfaWQiOiI2NGY3YzBkY2ZmMzY2NmQ4YTdjMDA0MDciLCJlbWFpbCI6InVzZXJAY29ycmVvLmNvbSIsInJvbGUiOiJhZG1pbiIsImZpcnN0X25hbWUiOiJ1c2VyIiwibGFzdF9uYW1lIjoidXNlciIsImFnZSI6MzMsImNhcnQiOiI2NGY3YzBkY2ZmMzY2NmQ4YTdjMDA0MDkiLCJpYXQiOjE2OTQwNTU5OTgsImV4cCI6MTY5NDE0MjM5OH0.hIYn2frVQCVNBMGI5E4sRkTqCTBhSHQ0Th0uSOUtabc; Path=/; Expires=Fri, 06 Sep 2024 03:12:07 GMT;
+
+  3.5 - Ten en cuenta que los tokens de las cookies expiran por lo que para realizar varios tests debes volver a loguearte y copiar y pegar el token en la cookie de Postman.
